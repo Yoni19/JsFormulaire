@@ -20,9 +20,9 @@ const validate = () => {
 
 console.log(saisieFirstName,saisieLastName,saisieAge,saisieMail,saisieMail2,saisieMdp,cgu);
 
-if (saisieFirstName.length < 3){
-  console.log('Votre Prénom doit contenir au moins 3 caractères');
-  error.innerHTML = "Votre Prénom doit contenir au moins 3 caractères"
+if (saisieLastName == "" || saisieFirstName == "" || saisieAge == "" || saisieMail == "" || saisieMail2 == "" || saisieMdp == "" || saisieMdp2 == ""){
+  console.log("Merci de bien vouloir compléter le formulaire")
+  error.innerHTML = "Merci de bien vouloir compléter le formulaire"
   return false
 } else if (saisieMdp !== saisieMdp2){
   console.log('Vos mots de passe ne sont pas identique');
@@ -44,9 +44,9 @@ if (saisieFirstName.length < 3){
 console.log("Le format de votre adresse mail n'est pas valide")
 error.innerHTML = "Le format de votre adresse mail n'est pas valide"
 return false
-} else if (saisieLastName == "" || saisieFirstName == "" || saisieAge == "" || saisieMail == "" || saisieMail2 == "" || saisieMdp == "" || saisieMdp2 == ""){
-  console.log("Merci de bien vouloir compléter le formulaire")
-  error.innerHTML = "Merci de bien vouloir compléter le formulaire"
+} else if (saisieFirstName.length < 3){
+  console.log('Votre Prénom doit contenir au moins 3 caractères');
+  error.innerHTML = "Votre Prénom doit contenir au moins 3 caractères"
   return false
 } else if (cgu === false){
   console.log("Veuillez accepter les conditions d'utilisation")
