@@ -14,7 +14,7 @@ const validate = () => {
   let saisieMail2= document.getElementById("mail2").value;
   let saisieMdp = document.getElementById("mdp").value;
   let saisieMdp2 = document.getElementById("mdp2").value;
-  let cgu = document.getElementsByName("checkmark").checked;
+  let cgu = document.getElementById("myCheck").checked;
   let error = document.getElementById("error");
  
 
@@ -44,13 +44,13 @@ if (saisieFirstName.length < 3){
 console.log("Le format de votre adresse mail n'est pas valide")
 error.innerHTML = "Le format de votre adresse mail n'est pas valide"
 return false
-} else if (saisieLastName == "" || saisieFirstName == "" || saisieAge == "" || saisieMail == "" || saisieMail2 == "" || saisieMdp == "" || saisieMdp2 == "" || cgu == "" ){
+} else if (saisieLastName == "" || saisieFirstName == "" || saisieAge == "" || saisieMail == "" || saisieMail2 == "" || saisieMdp == "" || saisieMdp2 == ""){
   console.log("Merci de bien vouloir compléter le formulaire")
   error.innerHTML = "Merci de bien vouloir compléter le formulaire"
   return false
-/*} else if (cgu ){
+} else if (cgu === false){
   console.log("Veuillez accepter les conditions d'utilisation")
-  error.innerHTML = "Veuillez accepter les conditions d'utilisation"*/
+  error.innerHTML = "Veuillez accepter les conditions d'utilisation"
 }else {
   document.location.href="redirection.html"
   
