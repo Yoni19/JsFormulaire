@@ -26,7 +26,7 @@ if (saisieFirstName.length < 3){
   return false
 } else if (saisieMdp !== saisieMdp2){
   console.log('Vos mots de passe ne sont pas identique');
-  error.innerHTML = "Vos mots de passe ne sont pas identique"
+  error.innerHTML = "Vos mots de passe ne sont pas identiques"
   return false
 } else if (saisieAge < 18){
   console.log("Votre age doit être un chiffre supérieur a 18")
